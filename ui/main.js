@@ -20,14 +20,13 @@ button.onclick = function(){
     }; 
     
     //Make the Request
-    request.open('GET', 'http://itsmetheviper26.imad.hasura-app.io/submit-name?name=' + name, true);
+    request.open('GET', 'http://itsmetheviper26.imad.hasura-app.io/counter', true);
     request.send(null);
     
 };
 
 //Submit name
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
+
 var submit = document.getElementById('submit_btn');
 submit.onclick = function(){
     //Create request object
@@ -56,6 +55,8 @@ submit.onclick = function(){
     }; 
     
     //Make the Request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET', 'http://itsmetheviper26.imad.hasura-app.io/submit-name?name=' + name, true);
     request.send(null);
     
